@@ -19,18 +19,24 @@ void setup() {
 
 	// Provide official timezone names
 	// https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-	myTZ.setLocation(F("Pacific/Auckland"));
-	Serial.print(F("New Zealand:     "));
-	Serial.println(myTZ.dateTime());
+        if (myTZ.setLocation(F("Pacific/Auckland"))) {
+                Serial.print(F("New Zealand:     "));
+                Serial.println(myTZ.dateTime());
+        } else {
+                Serial.println(errorString());
+        }
 
 	// Wait a little bit to not trigger DDoS protection on server
 	// See https://github.com/ropg/ezTime#timezonedropnl
 	delay(5000);
 
 	// Or country codes for countries that do not span multiple timezones
-	myTZ.setLocation(F("de"));
-	Serial.print(F("Germany:         "));
-	Serial.println(myTZ.dateTime());
+        if (myTZ.setLocation(F("de"))) {
+                Serial.print(F("Germany:         "));
+                Serial.println(myTZ.dateTime());
+        } else {
+                Serial.println(errorString());
+        }
 
 	// Same as above
 	delay(5000);
