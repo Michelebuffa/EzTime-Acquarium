@@ -543,7 +543,7 @@ if (weekday() == TUESDAY) Serial.print("Tuesday!!");
 ```
 
 ```
-if (month() == FEBRUARY && day() == 14) Serial.print("Valentine's day!");
+if (month() == FEBRUARI && day() == 14) Serial.print("Valentine's day!");
 ```
 
 &nbsp;
