@@ -146,7 +146,7 @@ void luna()
   Ephemeris::floatingHoursToHoursMinutesSeconds(Ephemeris::floatingHoursWithUTCOffset(moon.rise, timezone), &mrhours, &mrminutes, &mrseconds);
 
   /*! Convert floating hours to integer hours, minutes, seconds. */
-  Ephemeris::floatingHoursToHoursMinutesSeconds(Ephemeris::floatingHoursWithUTCOffset(moon.rise, timezone), &mshours, &msminutes, &msseconds);
+  Ephemeris::floatingHoursToHoursMinutesSeconds(Ephemeris::floatingHoursWithUTCOffset(moon.set, timezone), &mshours, &msminutes, &msseconds);
 
   /*! Convert integer hours, minutes, seconds to floating hours. */
   tmoon = Ephemeris::hoursMinutesSecondsToFloatingHours(hh, mn, ss);
